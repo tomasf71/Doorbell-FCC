@@ -18,3 +18,6 @@ Informace že krabička je online: topic /fcc/online hodnota = název kdo je onl
 K tomu aby vše fungovalo, musí být v provozu hlavní krabička s displejem, fungovat WiFi a musí být spuštěný NAS (Synology) s nainstalovaným MQTT serverem(Mosquito). IP adresa NAS musí být nastavena na IP: 192.168.2.39
 
 Zdrojový kód mají všechny krabičky stejný. Liší se pouze v definici jakou funkci konkrétní krabička bude mít. Definice ve zdrojovém kódu je zde: #define nazev „ Sklad“ tzn. role tohoto zařízení je Sklad
+
+Pokud se nahraje program na nový modul [[https://wiki.wemos.cc/products:d1:d1_mini|WeMOS D1 (ESP8255)]] pak při prvním spuštění se aktivuje Wifi do režimu AP. Pokud se připojíte k tomuto AP máte možnost nakonfigurovat připojení k WiFi. Po uložení a restartu si již modul bude připojovat do na uloženou WiFi. V případě že WiFi je nedostupná, pak se opět aktivuje mód AP.
+
