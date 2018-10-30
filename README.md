@@ -1,5 +1,5 @@
 # Doorbell-FCC
-Zvonek od přepravců je připojen na vstup D6 modulu WeMOS D1 (ESP8255) umístěném ve staré montáži na zdi. Napájen je s trafa na zdi u zadních vchodových dveří. Tento modul má bzučák, tlačítko a displej.Pomocí tlačítka lze přepínat kde bude zvonit bzučák při stlačení tlačítka u vchodu z parkoviště. To na koho je zvonek přepojen je signalizováno na LCD displeji. Zároveň je na LCD zobrazen nápis on-line jako příznak toho, že dotyčná osoba na kterou je přesměrováno má zařízení zapojené.
+Zvonek od přepravců je připojen na vstup D6 modulu WeMOS D1 (ESP8255) umístěném ve staré montáži na zdi. Napájen je z trafa na zdi u zadních vchodových dveří. Tento modul má bzučák, tlačítko a displej. Pomocí tlačítka lze přepínat kde bude zvonit bzučák při stlačení tlačítka u vchodu z parkoviště. To na koho je zvonek přepojen je signalizováno na LCD displeji. Zároveň je na LCD zobrazen nápis on-line jako příznak toho, že dotyčná osoba na kterou je přesměrováno má zařízení zapojené.
 
 Je možno přesměrovat na tyto osoby:
 
