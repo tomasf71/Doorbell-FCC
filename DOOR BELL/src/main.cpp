@@ -9,20 +9,22 @@
 #include <ESP8266WiFi.h>          //https://github.com/esp8266/Arduino
 #include <DNSServer.h>
 #include <ESP8266WebServer.h>
+
 #include <WiFiManager.h>          //https://github.com/tzapu/WiFiManager
 #include "Adafruit_MQTT.h"
 #include "Adafruit_MQTT_Client.h"
 
+
 // D7 = LED že je aktivní zvonek
 // D4 = jsem listener
 // D5 = buzzer
-// TLACITKO přepínání kdo bude poslouchat= D3
+// TLACITKO přepínání kdo bude poslouchat = D3
 // TLAČITKO ZVONEK = D6
 
-//#define MQTT_SERVER      "10.0.1.43"     //doma
+//#define MQTT_SERVER      "10.0.1.43"     //TF doma
 #define MQTT_SERVER      "192.168.2.39"   //fcc ps
 #define MQTT_SERVERPORT  1883
-#define nazev           " Radka"  // role tohoto zařízení
+#define nazev           " Sklad"  // role tohoto zařízení
 
 #define bell_ton           1000
 #define bell_delka         3000
@@ -141,7 +143,26 @@ Adafruit_MQTT_Subscribe *subscription;
        if (message=="TRUE") {
        message=(char *)s_listener.lastread;        // jsem ten který by měl zonit?
         if ((message==nazev) or (message==nazev7) or (nazev==nazev1)) {
-          tone(D5,bell_ton,bell_delka);}    // zazvoň
+          tone(D5,1000,500);
+                    delay(500);
+          tone(D5,1500,500);
+                    delay(500);
+          tone(D5,1000,500);
+                    delay(500);
+          tone(D5,1500,500);
+                    delay(500);
+          tone(D5,1000,500);
+                    delay(500);
+          tone(D5,1500,500);
+                    delay(500);
+          tone(D5,1000,500);
+                    delay(500);
+          tone(D5,1500,500);
+                    delay(500);
+          tone(D5,1000,500);
+                    delay(500);
+          tone(D5,1500,500);
+          ;}    // zazvoň
        }
          else {
            display.setCursor(0,5);
@@ -160,7 +181,7 @@ Adafruit_MQTT_Subscribe *subscription;
        display.display();
 
        message=(char *)s_listener.lastread;        // jsem ten který by měl zvonit?
-       if ((message==nazev) or (message==nazev7) or (nazev==nazev1))  {
+       if ((message==nazev) or (message==nazev7))  {
         tone(D5,1000,300);   // tak pípni
         p_online.publish(nazev); // a pošli zprávu že jsi online
        }
