@@ -117,7 +117,7 @@ void setup()   {
          retries--;
          if (retries == 0) {
            // basically die and wait for WDT to reset me
-           while (1);
+           ESP.restart(); //while (1);
          }
     }
     Serial.println("MQTT Connected!");
